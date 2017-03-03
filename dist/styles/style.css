@@ -1,0 +1,40 @@
+.flex-container{
+    display:flex;
+}
+
+.sideBar{
+    width: 20%;
+    background-color: aqua;
+    font-size: 20px
+   
+}
+
+.btn{
+    flex-direction: column;
+    flex: 1;
+}
+
+.messages{
+    flex:1;
+    margin-left: 20px;
+}
+
+.messages .panel-body .message:nth-child(even) {
+    background: #EEE;
+}
+
+.panel-body{
+    background-color: burlywood;
+}
+
+.panel-heading{
+    background-color: saddlebrown
+}
+.message-date {
+    font-size: .6em;
+    font-style: italic;
+}
+
+.panel-footer{
+    flex:1;
+}

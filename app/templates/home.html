@@ -1,7 +1,44 @@
+<div class="flex-container">
+
+    <div class="sideBar" >
+        <ul>
+            <li ng-repeat="room in rooms" ng-click="selectRoom(room)">{{room.name}}</li>
+        </ul>
+        <button type="button" class="btn btn-default" ng-click="open()">New Room</button>
+    </div>
 
 
-<h1>Rooms</h1>
-<button type="button" class="btn btn-default" ng-click="open()">New Room</button>
-<div ng-repeat="room in rooms">
-    <h1>{{room.name}}</h1>
+
+    <div class="messages">
+        <div class="row">
+            <div class="panel">
+                <div class="panel-heading"> 
+                <h1>{{currentRoom.name}}</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="row message" ng-repeat="message in messages">
+                        <div class="col-md-2">
+                            <strong>{{message.username}}</strong>
+                            <div class="row message-date">
+                                <div class="col-md-2">{{ message.sent }}</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">{{message.content}}</div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+        <div class="panel-footer">
+            <div class="input-group">
+                <input type="text" class="form-control">
+                    <span class ="input-group-btn">
+                        <button class="btn btn-default" type="button">Send</button>    
+                    </span>    
+            </div>    
+        </div>
+    
+
