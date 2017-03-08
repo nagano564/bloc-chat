@@ -15,7 +15,15 @@
             $scope.currentRoom = room;
             $scope.messages = Message.getByRoomId($scope.currentRoom.$id);
         };
+        
+        $scope.sendMessage = function(message){
+            if (message && message !== "") {
+                Message.send(message, $scope.currentRoom.$id)
+            }
+            $scope.message = "";
+        }
     }
+        
 
     angular
         .module('blocChat')
