@@ -69,10 +69,8 @@ li:hover {
     white-space: nowrap;
 }
 
-.panel-footer.message-box{
-    flex:1;
-    border-radius: 5px
-        
+.panel-footer{
+    flex:1   
 }
 
 .col-md-8{

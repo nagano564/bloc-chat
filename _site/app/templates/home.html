@@ -36,15 +36,13 @@
     
     
 
-        <div class="panel-footer message-box" ng-show="currentRoom">
-            <form ng-submit="sendMessage(message)">
-                <div class="input-group">
-                    <input type="text" class="form-control" ng-model="message">
+        <div class="panel-footer" ng-show="currentRoom">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="message">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Send</button>    
-                    </span>
-                </div>  
-            </form>
+                        <button class="btn btn-default" type="button" ng-click="sendMessage(message)">Send</button>    
+                    </span>    
+            </div>    
         </div>
     </div>
 </div>
