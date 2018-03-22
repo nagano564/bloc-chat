@@ -1,13 +1,13 @@
 <div class="flex-container">
 
     <div class="sideBar" >
-        <h3 class="room-title">Room Names</h3>
-            <ul>
-                <li ng-repeat="room in rooms" ng-click="selectRoom(room)">{{room.name}}</li>
-            </ul>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-default" ng-click="open()">New Room</button>
-                    </div>
+      <h3 class="room-title">Room Names</h3>
+        <ul>
+            <li ng-repeat="room in rooms" ng-click="selectRoom(room)">{{room.name}}</li>
+        </ul>
+        <div class="text-center">
+            <button type="button" class="btn btn-default" ng-click="open()">New Room</button>
+        </div>
     </div>
 
 
@@ -15,35 +15,33 @@
     <div class="messages">
         <div class="row">
             <div class="panel">
-                <div class="panel-heading"> 
+                <div class="panel-heading">
                 <h1>{{currentRoom.name}}</h1>
                 </div>
                 <div class="panel-body">
-                    <div class="row message" ng-repeat="message in messages">
-                        <div class="col-md-2">
-                            <strong>{{message.username}}</strong>
-                            <div class="row message-date">
-                                <div class="col-md-2">{{ message.sent | date:'MM-dd-yy HH:mm'}}</div>
-                            </div>
-                        </div>
-                        <div class="col-md-8">{{message.content}}</div>
-                        
-                    </div>
-                    
+                  <div class="row message" ng-repeat="message in messages">
+                      <div class="col-md-2">
+                          <strong>{{message.username}}</strong>
+                          <div class="row message-date">
+                              <div class="col-md-2">{{ message.sent | date:'MM-dd-yy HH:mm'}}</div>
+                          </div>
+                      </div>
+                      <div class="col-md-8">{{message.content}}</div>
+                  </div>
                 </div>
             </div>
         </div>
-    
-    
+
+
 
         <div class="panel-footer message-box" ng-show="currentRoom">
             <form ng-submit="sendMessage(message)">
                 <div class="input-group">
                     <input type="text" class="form-control" ng-model="message">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Send</button>    
+                        <button class="btn btn-default" type="button">Send</button>
                     </span>
-                </div>  
+                </div>
             </form>
         </div>
     </div>

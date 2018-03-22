@@ -4,7 +4,7 @@ body {
     background-image: url(../assets/images/chat-image.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;    
+    background-size: cover;
 }
 
 .flex-container{
@@ -30,7 +30,6 @@ body {
     font-size: 20px;
     flex: 1;
     padding-bottom: 10px;
-    border-radius: 5%
 }
 
 .room-title{
@@ -72,7 +71,7 @@ li:hover {
 .panel-footer.message-box{
     flex:1;
     border-radius: 5px
-        
+
 }
 
 .col-md-8{
